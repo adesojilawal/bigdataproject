@@ -1,0 +1,9 @@
+{
+	"name": "GBCfactory4bigdata",
+	"location": "canadaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d4463558-b407-4593-b0f1-fb3b5b1cdb23",
+		"tenantId": "b5dc206c-17fd-4b06-8bc8-24f0bb650229"
+	}
+}
