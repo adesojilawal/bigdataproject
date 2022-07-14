@@ -2,7 +2,7 @@
 	"name": "MongoDbAtlas1",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
-		"description": "mongodb+srv://cluster0.dssoy.mongodb.net/bigdataproject\nmongodb+srv://sojilawal:arid984glum250@cluster0.dssoy.mongodb.net/test",
+		"description": "mongodb+srv://cluster0.dssoy.mongodb.net/bigdataproject\nmongodb+srv://sojilawal:bigdata@cluster0.dssoy.mongodb.net/test",
 		"annotations": [],
 		"type": "MongoDbAtlas",
 		"typeProperties": {
