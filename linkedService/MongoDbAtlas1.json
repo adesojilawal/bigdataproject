@@ -1,0 +1,12 @@
+{
+	"name": "MongoDbAtlas1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "MongoDbAtlas",
+		"typeProperties": {
+			"connectionString": "mongodb+srv://cluster0.dssoy.mongodb.net/bigdataproject",
+			"database": "bigdataproject"
+		}
+	}
+}
