@@ -1,0 +1,16 @@
+{
+	"name": "OnPremise",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=Localhost;initial catalog=bigdatagbc;user id=bigdatagbc",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhNzc0NmU5OS0wN2RiLTRiMDEtYjhlOC0yOTUyZWUwMTQzMTAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeOnpremise",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
