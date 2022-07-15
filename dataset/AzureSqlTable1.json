@@ -88,7 +88,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "usstatedata"
+			"table": "uscrimedata"
 		}
 	}
 }
