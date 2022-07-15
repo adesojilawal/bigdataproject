@@ -1,0 +1,98 @@
+{
+	"name": "SqlServerTableuscrime",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OnPremise",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "file_no",
+				"type": "varchar"
+			},
+			{
+				"name": "agency",
+				"type": "varchar"
+			},
+			{
+				"name": "agency_jurisdiction",
+				"type": "varchar"
+			},
+			{
+				"name": "state",
+				"type": "varchar"
+			},
+			{
+				"name": "population",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "violent_crimes",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "homicides",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "rapes",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "assaults",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "robberies",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "months_reported",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "crimes_percapita",
+				"type": "decimal",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "homicides_percapita",
+				"type": "decimal",
+				"precision": 5,
+				"scale": 2
+			},
+			{
+				"name": "rapes_percapita",
+				"type": "decimal",
+				"precision": 6,
+				"scale": 2
+			},
+			{
+				"name": "assaults_percapita",
+				"type": "decimal",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "robberies_percapita",
+				"type": "decimal",
+				"precision": 7,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "uscrimedata"
+		}
+	}
+}
