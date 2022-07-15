@@ -9,16 +9,72 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "file_no",
+				"name": "Population",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "agency",
+				"name": "Income",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Illiteracy",
+				"type": "decimal",
+				"precision": 3,
+				"scale": 1
+			},
+			{
+				"name": "Life_Exp",
+				"type": "decimal",
+				"precision": 5,
+				"scale": 2
+			},
+			{
+				"name": "Murder",
+				"type": "decimal",
+				"precision": 4,
+				"scale": 1
+			},
+			{
+				"name": "HS_Grad",
+				"type": "decimal",
+				"precision": 4,
+				"scale": 1
+			},
+			{
+				"name": "Frost",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Area",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "abb",
 				"type": "varchar"
 			},
 			{
-				"name": "agency_jurisdiction",
+				"name": "landarea",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "x",
+				"type": "decimal",
+				"precision": 8,
+				"scale": 4
+			},
+			{
+				"name": "y",
+				"type": "decimal",
+				"precision": 7,
+				"scale": 4
+			},
+			{
+				"name": "division",
 				"type": "varchar"
 			},
 			{
@@ -26,74 +82,13 @@
 				"type": "varchar"
 			},
 			{
-				"name": "population",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "violent_crimes",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "homicides",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "rapes",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "assaults",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "robberies",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "months_reported",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "crimes_percapita",
-				"type": "decimal",
-				"precision": 7,
-				"scale": 2
-			},
-			{
-				"name": "homicides_percapita",
-				"type": "decimal",
-				"precision": 5,
-				"scale": 2
-			},
-			{
-				"name": "rapes_percapita",
-				"type": "decimal",
-				"precision": 6,
-				"scale": 2
-			},
-			{
-				"name": "assaults_percapita",
-				"type": "decimal",
-				"precision": 7,
-				"scale": 2
-			},
-			{
-				"name": "robberies_percapita",
-				"type": "decimal",
-				"precision": 7,
-				"scale": 2
+				"name": "region",
+				"type": "varchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "uscrimedata"
+			"table": "usstatedata"
 		}
 	}
 }
