@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy Data from Onpremise MS SQL",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -32,13 +32,13 @@
 							{
 								"source": {
 									"name": "file_no",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "Int32",
+									"physicalType": "int"
 								},
 								"sink": {
 									"name": "file_no",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -252,6 +252,184 @@
 				"inputs": [
 					{
 						"referenceName": "SqlServerTableuscrime",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy data from Mongodb Atlas Cloud",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "MongoDbAtlasSource",
+						"batchSize": 100
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['Population']"
+								},
+								"sink": {
+									"name": "Population",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Income']"
+								},
+								"sink": {
+									"name": "Income",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Illiteracy']"
+								},
+								"sink": {
+									"name": "Illiteracy",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Life_Exp']"
+								},
+								"sink": {
+									"name": "Life_Exp",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Murder']"
+								},
+								"sink": {
+									"name": "Murder",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HS_Grad']"
+								},
+								"sink": {
+									"name": "HS_Grad",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Frost']"
+								},
+								"sink": {
+									"name": "Frost",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Area']"
+								},
+								"sink": {
+									"name": "Area",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['abb']"
+								},
+								"sink": {
+									"name": "abb",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['landarea']"
+								},
+								"sink": {
+									"name": "landarea",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['x']"
+								},
+								"sink": {
+									"name": "x",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['y']"
+								},
+								"sink": {
+									"name": "y",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['division']"
+								},
+								"sink": {
+									"name": "division",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['state']"
+								},
+								"sink": {
+									"name": "state",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['region']"
+								},
+								"sink": {
+									"name": "region",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": ""
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "MongoDbAtlasCollection1",
 						"type": "DatasetReference"
 					}
 				],

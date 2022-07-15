@@ -10,7 +10,8 @@
 		"schema": [
 			{
 				"name": "file_no",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "agency",
